@@ -1,5 +1,5 @@
 job "leak" {
-  datacenters = ["{{.Datacenters}}"]
+  datacenters = ["{{.datacenters}}"]
   type = "batch"
 
   group "leak-group" {
@@ -18,8 +18,8 @@ job "leak" {
       }
 
       resources {
-        cpu = {{.CPU}}
-        memory = {{.Memory}}
+        cpu = {{.cpu}}
+        memory = {{.memory}}
       }
     }
   }
