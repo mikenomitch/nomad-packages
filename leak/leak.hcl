@@ -1,5 +1,5 @@
 job "leak" {
-  datacenters = ["{{}}"]
+  datacenters = ["{{.Datacenters}}"]
   type = "batch"
 
   group "leak-group" {
@@ -9,19 +9,17 @@ job "leak" {
       driver = "docker"
 
       restart {
-        attempts = 100
+        attempts = 10
         delay    = "1s"
       }
 
-
       config {
         image = "mnomitch/leak"
-        memory_hard_limit = 2000
       }
 
       resources {
-        memory = 200
-        memory_hard_limit = -1
+        cpu = {{.CPU}}
+        memory = {{.Memory}}
       }
     }
   }
