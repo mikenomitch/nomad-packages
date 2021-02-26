@@ -1,6 +1,6 @@
 job "leak" {
   datacenters = ["{{.datacenters}}"]
-  type = "batch"
+  type = "service"
 
   group "leak-group" {
     count = 1
