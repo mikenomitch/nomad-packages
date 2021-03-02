@@ -21,7 +21,7 @@ job "curler" {
       port = 9001
 
       connect {
-         sidecar_service {
+        sidecar_service {
            proxy {
              upstreams {
                 destination_name = "env-reader"
