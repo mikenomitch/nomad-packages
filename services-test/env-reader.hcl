@@ -1,5 +1,5 @@
 job "env-reader" {
-  datacenters = ["{{.datacenters}}"]
+  datacenters = ["[[.datacenters]]"]
   type = "service"
 
   group "env-reader-group" {
@@ -38,7 +38,7 @@ job "env-reader" {
       }
 
       resources {
-        memory = 400
+        memory = [[.memory]]
       }
     }
   }

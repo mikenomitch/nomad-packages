@@ -1,5 +1,5 @@
 job "curler" {
-  datacenters = ["{{.datacenters}}"]
+  datacenters = ["[[.datacenters]]"]
   type = "service"
 
   group "curler-group" {
@@ -46,7 +46,7 @@ job "curler" {
       }
 
       resources {
-        memory = 400
+        memory = memory = [[.memory]]
       }
     }
   }
