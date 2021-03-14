@@ -17,9 +17,9 @@ variable "memory" {
 }
 
 variable_set "initial" {
-  contents = [variable.datacenters]
+  contents = [variable.datacenters.key]
 }
 
 variable_set "secondary" {
-  contents = [variable.cpu, variable.memory]
+  contents = [variable.cpu.key, variable.memory.key]
 }
