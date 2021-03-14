@@ -9,3 +9,13 @@ variable "memory" {
   type        = "string"
   default     = "999"
 }
+
+variable_page "first_page" {
+  order = 1
+  variables = [variable.datacenters, variable.memory]
+}
+
+variable_page "second_page" {
+  order = 2
+  variables = [variable.driver]
+}

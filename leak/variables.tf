@@ -15,3 +15,11 @@ variable "memory" {
   type        = "string"
   default     = "200"
 }
+
+variable_set "initial" {
+  contents = [variable.datacenters]
+}
+
+variable_set "secondary" {
+  contents = [variable.cpu, variable.memory]
+}
