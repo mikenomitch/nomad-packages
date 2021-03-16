@@ -10,12 +10,12 @@ variable "memory" {
   default     = "999"
 }
 
-variable_page "first_page" {
+variable_set "first_page" {
   order = 1
   variables = [variable.datacenters, variable.memory]
 }
 
-variable_page "second_page" {
+variable_set "second_page" {
   order = 2
   variables = [variable.driver]
 }
