@@ -47,6 +47,7 @@ job "curler" {
 
       resources {
         memory = [[.memory]]
+        cpu = [[.cpu]]
       }
     }
   }

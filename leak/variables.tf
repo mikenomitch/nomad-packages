@@ -6,14 +6,14 @@ variable "datacenters" {
 
 variable "cpu" {
   description = "cpu used for the task"
-  type        = "string"
-  default     = "200"
+  type        = number
+  default     = 200
 }
 
 variable "memory" {
   description = "memory used for the task"
-  type        = "string"
-  default     = "200"
+  type        = number
+  default     = 200
 }
 
 variable_set "initial" {
