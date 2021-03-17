@@ -3,5 +3,5 @@ nomad_resource "countdash" {
   description = "counts those dashes"
 
   template_file = "countdash.hcl"
-  variable_file = "countdash_variables.tf"
+  variable_file = "variables.tf"
 }
