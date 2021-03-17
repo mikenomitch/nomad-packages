@@ -9,7 +9,7 @@ variable "cpu" {
   type        = "number"
   default     = 220
 
-  meta {
+  meta = {
     min = 100
     max = 300
   }
@@ -20,7 +20,7 @@ variable "memory" {
   type        = "number"
   default     = 200
 
-  meta {
+  meta = {
     min = 200
     max = 1000
   }
