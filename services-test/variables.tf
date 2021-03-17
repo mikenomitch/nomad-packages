@@ -6,7 +6,7 @@ variable "datacenters" {
 
 variable "memory" {
   description = "memory limit for the task"
-  type        = number
+  type        = "number"
   default     = 300
 
   meta {
