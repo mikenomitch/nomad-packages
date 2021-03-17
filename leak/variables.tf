@@ -1,6 +1,6 @@
 variable "datacenters" {
   description = "the datacenters used for the job"
-  type        = list(string)
+  type        = "string"
   default     = "dc1"
 }
 
