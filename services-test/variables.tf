@@ -5,9 +5,14 @@ variable "datacenters" {
 }
 
 variable "memory" {
-  description = "memory used for the task"
-  type        = "string"
-  default     = "999"
+  description = "memory limit for the task"
+  type        = number
+  default     = 300
+
+  meta {
+    min = 200
+    max = 900
+  }
 }
 
 variable_set "first_page" {
