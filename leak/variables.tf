@@ -1,13 +1,13 @@
 variable "datacenters" {
   description = "the datacenters used for the job"
-  type        = "string"
+  type        = list(string)
   default     = "dc1"
 }
 
 variable "cpu" {
   description = "cpu used for the task"
   type        = "number"
-  default     = 200
+  default     = 220
 
   meta {
     min = 100
