@@ -9,18 +9,18 @@ variable "memory" {
   type        = "number"
   default     = 300
 
-  meta {
+  meta = {
     min = 200
     max = 900
   }
 }
 
-variable_set "first_page" {
-  order = 1
-  variables = [variable.datacenters, variable.memory]
-}
+// variable_set "first_page" {
+//   order = 1
+//   variables = [variable.datacenters, variable.memory]
+// }
 
-variable_set "second_page" {
-  order = 2
-  variables = [variable.driver]
-}
+// variable_set "second_page" {
+//   order = 2
+//   variables = [variable.driver]
+// }
