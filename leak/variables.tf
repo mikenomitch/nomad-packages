@@ -26,10 +26,10 @@ variable "memory" {
   }
 }
 
-variable_set "initial" {
-  contents = ["datacenters"]
-}
+// variable_set "initial" {
+//   contents = ["datacenters"]
+// }
 
-variable_set "secondary" {
-  contents = ["cpu", "memory"]
-}
+// variable_set "secondary" {
+//   contents = ["cpu", "memory"]
+// }
