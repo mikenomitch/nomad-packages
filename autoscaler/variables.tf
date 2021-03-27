@@ -9,6 +9,7 @@ variable "minScale" {
   type        = "number"
   default     = 1
 }
+
 variable "maxScale" {
   description = "highest numbet to scale to"
   type        = "number"
