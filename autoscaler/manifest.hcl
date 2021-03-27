@@ -3,7 +3,7 @@ nomad_resource "autoscaler" {
   description = "the autoscaler job"
 
   template_file = "autoscaler.nomad"
-  variable_file = "variables.tf"
+  variable_file = "variables.hcl"
 }
 
 nomad_resource "grafana" {
@@ -11,7 +11,7 @@ nomad_resource "grafana" {
   description = "show me some graphs"
 
   template_file = "grafana.nomad"
-  variable_file = "variables.tf"
+  variable_file = "variables.hcl"
 }
 
 nomad_resource "loki" {
@@ -19,7 +19,7 @@ nomad_resource "loki" {
   description = "trick some norsemen"
 
   template_file = "loki.nomad"
-  variable_file = "variables.tf"
+  variable_file = "variables.hcl"
 }
 
 nomad_resource "prometheus" {
@@ -27,7 +27,7 @@ nomad_resource "prometheus" {
   description = "make some fire"
 
   template_file = "prometheus.nomad"
-  variable_file = "variables.tf"
+  variable_file = "variables.hcl"
 }
 
 nomad_resource "webapp" {
@@ -35,5 +35,5 @@ nomad_resource "webapp" {
   description = "scale me!"
 
   template_file = "webapp.nomad"
-  variable_file = "variables.tf"
+  variable_file = "variables.hcl"
 }

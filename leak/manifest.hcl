@@ -3,5 +3,5 @@ nomad_resource "leak" {
   description = "a simple memory leak to test memory limits"
 
   template_file = "leak.hcl"
-  variable_file = "leak_variables.tf"
+  variable_file = "variables.hcl"
 }

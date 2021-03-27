@@ -3,7 +3,7 @@ nomad_resource "env-reader" {
   description = "env reader description"
 
   template_file = "env-reader.hcl"
-  variable_file = "env-reader_variables.tf"
+  variable_file = "env-reader_variables.hcl"
 }
 
 nomad_resource "curler" {
@@ -11,5 +11,5 @@ nomad_resource "curler" {
   description = "curler description"
 
   template_file = "curler.hcl"
-  variable_file = "curler_variables.tf"
+  variable_file = "curler_variables.hcl"
 }
