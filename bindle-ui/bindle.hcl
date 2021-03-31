@@ -3,13 +3,6 @@ job "bindle-ui" {
 
   group "bindle-ui" {
     network {
-      mode = "bridge"
-
-      port "nomad" {
-        static = "4646"
-        to = "4646"
-      }
-
       port "api" {
         static = "9000"
       }
@@ -23,7 +16,7 @@ job "bindle-ui" {
       driver = "docker"
 
       env {
-        NOMAD_ADDR = "[[.nomad_address]]"
+        NOMAD_ADDR = "host.docker.internal:4646"
       }
 
       config {
@@ -39,10 +32,6 @@ job "bindle-ui" {
 
     task "ui" {
       driver = "docker"
-
-      env {
-        NOMAD_ADDR = "[[.nomad_address]]"
-      }
 
       config {
         image = "mnomitch/bindle-ui:latest"
