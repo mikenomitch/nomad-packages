@@ -14,6 +14,10 @@ job "bindle-ui" {
     task "api" {
       driver = "docker"
 
+      env {
+        NOMAD_ADDR = "[[.nomad_address]]"
+      }
+
       config {
         image = "mnomitch/bindle-api:latest"
         ports = ["api"]
