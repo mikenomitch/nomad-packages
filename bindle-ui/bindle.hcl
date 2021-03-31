@@ -4,8 +4,9 @@ job "bindle-ui" {
   group "bindle-ui" {
     network {
       port "nomad" {
-        static = "4646"
+        to = "4646"
       }
+
       port "api" {
         static = "9000"
       }
