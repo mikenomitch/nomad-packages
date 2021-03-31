@@ -15,7 +15,7 @@ job "bindle-ui" {
       driver = "docker"
 
       config {
-        image = "mikenomitch/bindle-api:latest"
+        image = "mnomitch/bindle-api:latest"
         ports = ["api"]
       }
     }
@@ -28,7 +28,7 @@ job "bindle-ui" {
       }
 
       config {
-        image = "mikenomitch/bindle-ui:latest"
+        image = "mnomitch/bindle-ui:latest"
         ports = ["ui"]
       }
     }
