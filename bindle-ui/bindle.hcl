@@ -10,6 +10,7 @@ job "bindle-ui" {
       port "api" {
         static = "9000"
       }
+
       port "ui" {
         static = "4200"
       }
@@ -24,7 +25,7 @@ job "bindle-ui" {
 
       config {
         image = "mnomitch/bindle-api:latest"
-        ports = ["api", "nomad"]
+        ports = ["api"]
       }
 
       resources {
