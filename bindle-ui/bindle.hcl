@@ -16,7 +16,7 @@ job "bindle-ui" {
       driver = "docker"
 
       env {
-        NOMAD_ADDR = "host.docker.internal:4646"
+        NOMAD_ADDR = "http://host.docker.internal:4646"
       }
 
       config {
