@@ -18,6 +18,11 @@ job "bindle-ui" {
         image = "mnomitch/bindle-api:latest"
         ports = ["api"]
       }
+
+      resources {
+        cpu    = 200
+        memory = 1000
+      }
     }
 
     task "ui" {
@@ -30,6 +35,11 @@ job "bindle-ui" {
       config {
         image = "mnomitch/bindle-ui:latest"
         ports = ["ui"]
+      }
+
+      resources {
+        cpu    = 200
+        memory = 1000
       }
     }
   }
