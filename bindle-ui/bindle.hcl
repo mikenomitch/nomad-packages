@@ -3,10 +3,10 @@ job "bindle-ui" {
 
   group "bindle-ui" {
     network {
-      port "ui" {
+      port "api" {
         static = "9000"
       }
-      port "api" {
+      port "ui" {
         static = "4200"
       }
     }
