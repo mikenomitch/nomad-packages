@@ -3,7 +3,10 @@ job "bindle-ui" {
 
   group "bindle-ui" {
     network {
+      mode = "bridge"
+
       port "nomad" {
+        static = "4646"
         to = "4646"
       }
 
