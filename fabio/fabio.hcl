@@ -39,17 +39,17 @@ job "fabio" {
     }
 
     task "fabio" {
-      constraint {
-        attribute = "${attr.cpu.arch}"
-        operator  = "="
-        value     = "amd64"
-      }
+      // constraint {
+      //   attribute = "${attr.cpu.arch}"
+      //   operator  = "="
+      //   value     = "amd64"
+      // }
 
-      constraint {
-        attribute = "${attr.kernel.name}"
-        operator  = "="
-        value     = "linux"
-      }
+      // constraint {
+      //   attribute = "${attr.kernel.name}"
+      //   operator  = "="
+      //   value     = "linux"
+      // }
 
       env {
        ## Add if your consul agent is not listening on 127.0.0.1:8500
