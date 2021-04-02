@@ -44,9 +44,9 @@ job "traefik" {
         data = <<EOF
 [entryPoints]
     [entryPoints.http]
-    address = ":8080"
+    address = ":[[.httpPort]]"
     [entryPoints.traefik]
-    address = ":8081"
+    address = ":[[.apiPort]]"
 
 [api]
     dashboard = true
