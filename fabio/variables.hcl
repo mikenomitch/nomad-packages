@@ -4,8 +4,8 @@ variable "datacenters" {
   default     = "dc1"
 }
 
-variable "httpPort" {
-  description = "port for http connections"
+variable "proxyPort" {
+  description = "port through which you proxy"
   type        = "number"
   default     = 9999
 }

@@ -9,8 +9,8 @@ job "fabio" {
 
   group "linux-amd64" {
     network {
-      port "http" {
-        static = [[.httpPort]]
+      port "proxy" {
+        static = [[.proxyPort]]
       }
 
       port "ui" {
