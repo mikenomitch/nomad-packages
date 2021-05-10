@@ -8,7 +8,6 @@ variable "cpu" {
   description = "cpu used for the task"
   type        = "number"
   default     = 220
-  }
 }
 
 variable "memory" {
