@@ -13,6 +13,11 @@ job "exec-leak" {
         delay    = "1s"
       }
 
+      config {
+        command = "exec-leak"
+      }
+
+
       artifact {
         source = "https://mikenomitch-public.s3.amazonaws.com/exec-leak"
       }
