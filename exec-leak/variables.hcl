@@ -4,6 +4,12 @@ variable "datacenters" {
   default     = "dc1"
 }
 
+variable "count" {
+  description = "count of tasks"
+  type        = "number"
+  default     = 1
+}
+
 variable "cpu" {
   description = "cpu used for the task"
   type        = "number"

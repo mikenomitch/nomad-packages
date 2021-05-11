@@ -3,7 +3,7 @@ job "exec-leak" {
   type = "service"
 
   group "exec-leak-group" {
-    count = 1
+    count = [[.count]]
 
     task "exec-leak" {
       driver = "exec"
