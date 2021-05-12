@@ -1,3 +1,9 @@
+nomad_resource "ceph-monitor" {
+  type = "job"
+  description = "a demo job to run ceph monitor"
+  template_file = "ceph.hcl"
+}
+
 nomad_resource "cephrbd-controller" {
   type = "job"
   description = "a demo job to run ceph controller"
