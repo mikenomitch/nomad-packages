@@ -36,7 +36,7 @@ nomad {
   address = "{{ with service "nomad-client" }}{{ with index . 0 }}http://{{.Address}}:{{.Port}}{{ end }}{{ end }}"
   namespace = "*"
   // If Nomad ALCs are not being used, comment this line out
-  token = {{key "service/autoscaler/acl"}}
+  token = "{{key "service/autoscaler/acl"}}"
 }
 telemetry {
   prometheus_metrics = true
