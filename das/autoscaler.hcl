@@ -52,7 +52,8 @@ strategy "target-value" {
   driver = "target-value"
 }
 dynamic_application_sizing {
-  evaluate_after = "0m"
+  evaluate_after            = "1m"
+  metrics_preload_threshold = "10m"
 }
 policy_eval {
   // Disable the horizontal application and horizontal cluster workers. This
@@ -62,6 +63,11 @@ policy_eval {
     horizontal = 0
   }
 }
+policy {
+  default_evaluation_interval = "10s"
+  default_cooldown = "1m"
+}
+
           EOF
 
         destination = "${NOMAD_TASK_DIR}/config.hcl"
