@@ -9,7 +9,8 @@ job "grafana" {
     }
 
     volume "grafana" {
-      type   = "host"
+      type = "host"
+      read_only = false
       source = "grafana"
     }
 
