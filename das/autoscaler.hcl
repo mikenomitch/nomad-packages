@@ -33,7 +33,10 @@ job "autoscaler" {
       template {
         data = <<EOF
 nomad {
-  address = "http://{{env "attr.unique.network.ip-address" }}:4646"
+  address = "{{ with service "nomad-client" }}{{ with index . 0 }}http://{{.Address}}:{{.Port}}{{ end }}{{ end }}"
+  namespace = "*"
+  // If Nomad ALCs are not being used, comment this line out
+  token = {{key "service/autoscaler/acl"}}
 }
 telemetry {
   prometheus_metrics = true
@@ -42,11 +45,22 @@ telemetry {
 apm "prometheus" {
   driver = "prometheus"
   config = {
-    address = "http://{{ env "attr.unique.network.ip-address" }}:9090"
+    address = "{{ with service "prometheus" }}{{ with index . 0 }}http://{{.Address}}:{{.Port}}{{ end }}{{ end }}"
   }
 }
 strategy "target-value" {
   driver = "target-value"
+}
+dynamic_application_sizing {
+  evaluate_after = "0m"
+}
+policy_eval {
+  // Disable the horizontal application and horizontal cluster workers. This
+  // helps reduce log noise during the demo.
+  workers = {
+    cluster    = 0
+    horizontal = 0
+  }
 }
           EOF
 

@@ -6,6 +6,12 @@ This sets up a demo of dynamic application sizing.
 
 - Nomad Enterprise binary being used
 
+- Nomad ACLs and Consul are being used
+
+- Consul Template is enabled
+
+- A Consul variable with key "service/autoscaler/acl" is set to provide an ACL token to autoscaler
+
 - Telemetry set up on all the nodes
 
 ```
