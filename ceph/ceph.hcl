@@ -18,7 +18,6 @@ job "ceph" {
   datacenters = ["[[.datacenters]]"]
 
   group "ceph" {
-
     network {
       # we can't configure networking in a way that will both satisfy the Ceph
       # monitor's requirement to know its own IP address *and* be routable
