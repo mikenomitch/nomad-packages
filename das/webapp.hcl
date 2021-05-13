@@ -2,7 +2,7 @@ job "webapp" {
   datacenters = ["[[.datacenters]]"]
 
   group "demo" {
-    count = 3
+    count = 2
 
     network {
       port "webapp_http" {}
@@ -24,13 +24,13 @@ job "webapp" {
 
       resources {
         cpu    = 100
-        memory = 16
+        memory = 100
       }
 
       scaling "mem" {
         enabled = true
-        min = 50
-        max = 200
+        min = 20
+        max = 60
 
         policy {
           evaluation_interval = "30s"
@@ -46,7 +46,7 @@ job "webapp" {
 
       scaling "cpu" {
         enabled = true
-        min = 50
+        min = 40
         max = 200
 
         policy {
