@@ -1,5 +1,5 @@
 job "plugin-aws-ebs-controller" {
-  datacenters = ["us-east-1"]
+  datacenters = ["[[.datacenters]]"]
 
   group "controller" {
     task "plugin" {
@@ -17,7 +17,7 @@ job "plugin-aws-ebs-controller" {
       }
 
       csi_plugin {
-        id        = "aws-ebs0"
+        id        = "[[.pluginId]]"
         type      = "controller"
         mount_dir = "/csi"
       }

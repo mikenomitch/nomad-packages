@@ -1,7 +1,7 @@
 id           = "ebs_prod_db1"
 name         = "database"
 type         = "csi"
-plugin_id    = "aws-ebs0"
+plugin_id    = "aws-ebs"
 
 capacity_max = "10G"
 capacity_min = "8G"

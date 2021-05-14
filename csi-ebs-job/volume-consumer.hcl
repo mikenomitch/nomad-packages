@@ -1,5 +1,5 @@
 job "example" {
-  datacenters = ["us-east-1"]
+  datacenters = ["[[.datacenters]]"]
 
   group "cache" {
     volume "test" {

@@ -1,5 +1,5 @@
 job "plugin-aws-ebs-nodes" {
-  datacenters = ["us-east-1"]
+  datacenters = ["[[.datacenters]]"]
   type = "system"
 
   group "nodes" {
@@ -20,7 +20,7 @@ job "plugin-aws-ebs-nodes" {
       }
 
       csi_plugin {
-        id        = "aws-ebs0"
+        id        = "[[.pluginId]]"
         type      = "node"
         mount_dir = "/csi"
       }
