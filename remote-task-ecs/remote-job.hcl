@@ -14,8 +14,8 @@ job "nomad-ecs-demo" {
 
       config {
         task {
-          launch_type     = [[.launchType]]
-          task_definition = [[.taskDefinition]]
+          launch_type     = "[[.launchType]]"
+          task_definition = "[[.taskDefinition]]"
           network_configuration {
             aws_vpc_configuration {
               assign_public_ip = "ENABLED"
