@@ -52,7 +52,7 @@ strategy "target-value" {
   driver = "target-value"
 }
 dynamic_application_sizing {
-  evaluate_after            = "1m"
+  evaluate_after            = "0m"
   metrics_preload_threshold = "10m"
 }
 policy_eval {
@@ -64,8 +64,8 @@ policy_eval {
   }
 }
 policy {
-  default_evaluation_interval = "10s"
-  default_cooldown = "1m"
+  default_evaluation_interval = "1s"
+  default_cooldown = "10s"
 }
 
           EOF

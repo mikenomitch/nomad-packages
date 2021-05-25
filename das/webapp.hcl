@@ -33,8 +33,8 @@ job "webapp" {
         max = 60
 
         policy {
-          evaluation_interval = "30s"
-          cooldown = "5m"
+          evaluation_interval = "10s"
+          cooldown = "0m"
 
           check "95pct" {
             strategy "app-sizing-percentile" {
@@ -50,8 +50,8 @@ job "webapp" {
         max = 200
 
         policy {
-          evaluation_interval = "30s"
-          cooldown = "5m"
+          evaluation_interval = "10s"
+          cooldown = "0m"
 
           check "95pct" {
             strategy "app-sizing-percentile" {
