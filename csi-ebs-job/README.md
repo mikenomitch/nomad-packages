@@ -4,6 +4,16 @@
 
 - ensure you have the proper permissions in AWS to manage volumes (see below)
 
+- ensure allow_privileged is set on docker in Nomad client config
+
+```
+plugin "docker" {
+  config {
+    allow_privileged = true
+  }
+}
+```
+
 - bindle install
 
 - ensure the CSI controller and nodes are healthy
